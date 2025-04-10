@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const Job = ({job}) => {
   const navigate = useNavigate();
-  // const jobId = "jhhj";
 
   const daysAgoFunction = (mongodbTime) => {
     const createdAt = new Date(mongodbTime);
@@ -27,7 +26,7 @@ const Job = ({job}) => {
       <div className="flex items-center gap-2 my-2">
         <Button className="p-6 " variant="outline" size="icon">
           <Avatar>
-            <AvatarImage src="https://i.pinimg.com/736x/cd/77/e0/cd77e04d9fe1a4ac66a26693d05e02c4.jpg" />
+            <AvatarImage src={job?.company?.logo} />
           </Avatar>
         </Button>
         <div>
@@ -54,4 +53,4 @@ const Job = ({job}) => {
   );
 };
 
-export default Job;
+export default Job;     

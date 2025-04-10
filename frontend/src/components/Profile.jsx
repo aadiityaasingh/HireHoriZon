@@ -5,14 +5,16 @@ import { Button } from './ui/button'
 import { Contact, Mail, Pen } from 'lucide-react'
 import { Badge } from './ui/badge'
 import { Label } from './ui/label'
-import ApplyJobTable from './ApplyJobTable'
+import ApplyJobTable from './AppliedJobTable'
 import UpdateProfileDialog from './UpdateProfileDialog'
 import { useSelector } from 'react-redux'
+import useGetAppliedJobs from '@/hooks/useGetAppliedJobs'
 
-const skills = ["HTML","CSS", "JavaScript", "Reactjs",]
+// const skills = ["HTML","CSS", "JavaScript", "Reactjs",]
 const isHaveResume = true;
 
 const Profile = () => {
+  useGetAppliedJobs();
 const[open, setOpen] = useState(false);
 const {user} = useSelector(store=>store.auth);
  
