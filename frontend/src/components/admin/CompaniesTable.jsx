@@ -16,11 +16,11 @@ import { useNavigate } from "react-router-dom";
 
 const CompaniesTable = () => {
   const { companies, searchCompanyByText } = useSelector((store) => store.company);
-  const [filterCompany, setFilterCompany] = useState(companies)
+  const [filterCompany, setFilterCompany] = useState()
   const navigate = useNavigate();
 
   useEffect(() =>{
-    const filteredCompany = companies.length >= 0 && companies.filter((company) =>{
+    const filteredCompany = companies?.length >= 0 && companies.filter((company) =>{
         if(!searchCompanyByText){
             return true
         };
@@ -43,11 +43,12 @@ const CompaniesTable = () => {
         </TableHeader>
         <TableBody>
           
-          {filterCompany?.map((company) => (
+          {Array.isArray(filterCompany) && filterCompany.map((company) => (
+
             <tr>
               <TableCell>
                 <Avatar>
-                  <AvatarImage src={company.logo } />
+                  <AvatarImage src={company?.logo } />
                 </Avatar>
               </TableCell>
               <TableCell className="cursor-pointer">{company.name}</TableCell>

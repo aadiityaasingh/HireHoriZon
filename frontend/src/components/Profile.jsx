@@ -22,7 +22,7 @@ const {user} = useSelector(store=>store.auth);
     <div>
       <Navbar/>
       <div className='max-w-7xl mx-auto bg-white
-       border border-gray-200 rounded-2xl my-5
+       border border-gray-500 rounded-2xl my-5
         p-8
         '>
           <div className='flex items-center gap-4'>
@@ -35,7 +35,7 @@ const {user} = useSelector(store=>store.auth);
             </div>
           </div>
           <Button onClick={()=> setOpen(true)} className="text-right" variant="outline"><Pen/></Button>
-        </div>
+        
         <div className='my-5'>
           <div className='flex items-center gap-3 my-2'>
             <Mail/>
@@ -58,8 +58,11 @@ const {user} = useSelector(store=>store.auth);
         <div className='grid w-full max-w-sm items-center gap-2'>
           <Label className="text-md font-bold">Resume</Label>
           {
-            isHaveResume ? <a target ='blank' href='' className='text-blue-400 w-full hover:underline cursor-pointer'>{user?.profile?.resumeOriginalName}</a> : <span>Nhi hai</span>
+            isHaveResume ? <a target="_blank" 
+            rel="noopener noreferrer" 
+            href={`/pdf/${user?.pdf}`} className='text-blue-400 w-full hover:underline cursor-pointer'>{user?.profile?.resumeOriginalName}</a> : <span>Nhi hai</span>
           }
+        </div>
         </div>
         <div className='max-w-4xl mx-auto bg-white rounded-2xl'>  
           <h1>Applied Jobs</h1>

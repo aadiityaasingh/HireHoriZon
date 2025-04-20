@@ -31,11 +31,14 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16">
         <div>
+        <img src="/src/assets/HireHoriZonlogo.png" alt="" className="h-10 w-10"/>
           <h1 className="text-2xl font-bold">
+            
             <Link to="/">
+            
               Hire<span className="text-blue-600">HoriZon</span>{" "}
             </Link>
           </h1>
@@ -101,7 +104,7 @@ const Navbar = () => {
                   />
                 </Avatar>
               </PopoverTrigger>
-              <PopoverContent className="w-80">
+              <PopoverContent className="w-80 bg-white">
                 <div className="flex gap-4 space-y-2">
                   <Avatar className="cursor-pointer">
                     <AvatarImage
@@ -116,7 +119,7 @@ const Navbar = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col text-gray-600">
+                <div className="flex flex-col text-gray-600 ">
                   {
                   user && user.role == 'student' && (
                     <div className="flex w-fit items-center gap-2 cursor-pointer">

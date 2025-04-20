@@ -30,7 +30,7 @@ const Jobs = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto mt-5">
         <div className="flex gap-5">
-          <div className="w-29%">
+          <div className="w-30%">
             <FilterCard />
           </div>
           {filterJobs.length <= 0 ? (

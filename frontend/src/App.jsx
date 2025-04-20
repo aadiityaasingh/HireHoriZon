@@ -1,4 +1,3 @@
-import Navbar from './components/Navbar'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './components/auth/Login'
@@ -84,4 +83,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

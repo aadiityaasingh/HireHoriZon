@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const jobSchema = new mongoose.Schema({
-    tile: {
+    title: {
         type: String,
         required: true,
     },
@@ -10,7 +10,7 @@ const jobSchema = new mongoose.Schema({
         required: true,
     },
     requirements: {
-        type: String,
+        type: [String],
     },
     salary: {
         type: Number,

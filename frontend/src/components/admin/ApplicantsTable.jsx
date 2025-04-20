@@ -4,6 +4,7 @@ import {
   TableBody,
   TableCaption,
   TableCell,
+  TableHeader,
   TableHead,
   TableRow,
 } from "../ui/table";
@@ -47,6 +48,7 @@ const ApplicantsTable = () => {
             <TableHead>Date</TableHead>
             <TableHead className="text-right">Action</TableHead>
           </TableRow>
+          </TableHeader>
           <TableBody>
             {applicants &&
               applicants?.applications?.map((item) => (
@@ -54,7 +56,7 @@ const ApplicantsTable = () => {
                   <TableCell>{item?.applicant?.fullname}</TableCell>
                   <TableCell>{item?.applicant?.email}</TableCell>
                   <TableCell>{item?.applicant?.phoneNumber}</TableCell>
-                  <TableCell>
+                  <TableCell className="float-right cursor-pointer">
                     {
                         item.applicant?.profile?.resume ? <a className="text-blue-500 cursor-pointer" href={item?.applicant?.profile?.resume} target="_blank">{item?.applicant?.profile?.resumeOriginalName}</a> : <span>NA</span>
                     }  </TableCell>
@@ -82,7 +84,7 @@ const ApplicantsTable = () => {
                 </tr>
               ))}
           </TableBody>
-        </TableHeader>
+        
       </Table>
     </div>
   );

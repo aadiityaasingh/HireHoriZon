@@ -26,7 +26,7 @@ const Footer = () => {
       <!-- Contact & Socials --> */}
       <div>
         <h3 class="text-xl font-semibold text-blue-500">Contact Us</h3>
-        <p class="mt-2 text-gray-400">Email: support@jobportal.com</p>
+        <p class="mt-2 text-gray-400">Email: support@hirehorizon.com</p>
         <p class="text-gray-400">Phone: +123 456 7890</p>
         <div class="flex space-x-4 mt-3">
           <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>

@@ -80,7 +80,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
     <div>
       <Dialog open={open}>
         <DialogContent
-          className="sm:max-w-[425px]"
+          className="sm:max-w-[425px] bg-gray-200"
           onInteractOutside={() => setOpen(false)}
         >
           <DialogHeader>
@@ -171,7 +171,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait{" "}
                 </Button>
               ) : (
-                <Button type="submit" className="w-full my-4">
+                <Button type="submit" className="w-full my-4 bg-blue-300 hover:bg-blue-400 cursor-pointer">
                   Submit
                 </Button>
               )}

@@ -21,7 +21,7 @@ app.get("/home", (req, res) => {
   });
 })
 
-//mideleware
+//middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

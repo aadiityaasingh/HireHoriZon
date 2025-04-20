@@ -68,6 +68,7 @@ const CompanySetup = () => {
   };
 
   useEffect(() => {
+    if (!singleCompany) return;
     setInput({
       name: singleCompany.name || "",
       description: singleCompany.description || "",
@@ -99,7 +100,7 @@ const CompanySetup = () => {
               <Input
                 type="text"
                 name="name"
-                value={input.name}
+                value={input?.name}
                 onChange={changeEventHandler}
               />
             </div>

@@ -1,4 +1,4 @@
-import { COMPANY_API_END_POINT, JOB_API_END_POINT } from '@/utlis/constant';
+import { COMPANY_API_END_POINT} from '@/utlis/constant';
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'

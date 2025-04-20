@@ -27,7 +27,7 @@ const PostJob = () => {
     location: "",
     jobType: "",
     experience: "",
-    position: 0,
+    position: "",
     companyId: "",
   });
 
@@ -40,7 +40,7 @@ const PostJob = () => {
   };
 
   const selectChangeHandler = (value) => {
-    const selectedCompany = companies.find((company) => company.name.toLowercase() == value);
+    const selectedCompany = companies.find((company) => company.name.toLowerCase() == value);
     setInput({...input, companyId:selectedCompany._id});
   };
 
@@ -155,8 +155,8 @@ const PostJob = () => {
                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
               />
             </div>
-            {companies.length <= 0 && (
-              <Select onValueChange={selectChangeHandler} defaultValue="light">
+            {companies.length > 0 && (
+              <Select onValueChange={selectChangeHandler}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="select a company" />
                 </SelectTrigger>
@@ -165,7 +165,7 @@ const PostJob = () => {
                         {
                             companies.map((company) => {
                                 return (
-<SelectItem value={company?.name?.toLowercase()}>{company.name}</SelectItem>
+<SelectItem value={company?.name?.toLowerCase()}>{company.name}</SelectItem>
                                 )
                             })
                         }
